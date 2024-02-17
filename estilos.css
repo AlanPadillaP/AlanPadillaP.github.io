@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Shade&family=Emblema+One&family=Press+Start+2P&display=swap');
 body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -12,9 +13,30 @@ header {
     padding-left: 25px;
 }
 
-h2 {
-    color: #e9bc17;
+.Texto-opaco {
+    font-family: "Emblema One", system-ui;
+    font-size: 10px;
+    color: #FFDE06;
+    display: flex;
+
     
+}
+
+.Texto-opaco ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Texto-opaco li{
+    list-style: none;
+    font-size: 3em;
+    letter-spacing: 5px;
+    transition: 1s;
+}
+
+.Texto-opaco li:hover{
+    filter: blur(70px);
+    opacity: 0;
 }
 
 .cara{
@@ -22,7 +44,7 @@ h2 {
     height: 200px;
 }
 
-
+/*  ***********     Primera parte   ***********   */
 
 .uno {
     width: 100%;
@@ -60,7 +82,12 @@ h2 {
     padding: 10px;
 }
 
+
+/*     ***********      Segunda parte   ***********    */
+
+
 .dos {
+    
     background: linear-gradient(45deg,#121212,#424242,#333030);
     height: 700px;
     display: flex;
@@ -91,10 +118,15 @@ h2 {
     height: 90px;
 }
 
+
+
+/*   ***********     Tercera parte    ***********   */
+
+
 .tres {
 
     background-color: #121212;
-    height: 700px;
+    height: auto;
     display:flex;
     justify-content: flex-start;
     flex-direction:column;
@@ -126,13 +158,16 @@ h2 {
     color: white;
 }
 
+
+/*    ***********    Cosas del los contactos    ***********   */
+
 .red-social{
     height: 50px;
     background-color: #424242;
     border-radius: 100px;
 }
 
-footer {
+Contacts {
     text-align: center;
     padding: 1em;
     max-width: 80px;
@@ -147,13 +182,10 @@ footer {
         height: 45px;
         border-radius: 50%;
         background: transparent;
-        border: 1px dashed #fff;
-        color: #fff;
-        margin: 5px;
         
         &:hover
             {
-                background: rgba(255, 255, 255, 0.1);
+                background: transparent;
             }
 
         .icons {
@@ -165,6 +197,40 @@ footer {
     }
 }
 
+
+
+/*    ***********    Cosas del carrusel o slider     ***********  */
+
+
+
+.slider-box{
+    width: 360px;
+    height: auto;
+    margin: 50 auto 0;
+    overflow: hidden;
+   
+}
+.slider-box ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+    
+}
+
+.slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+
+.slider-box img {
+    width: 70%;
+ 
+}
+
+/*   ***********      Cosas de tamaño en moviles    ***********    */
 
 @media (max-width: 1000px) {
     .caja-central{
@@ -186,7 +252,6 @@ footer {
     }
     .dos{
         height: auto;
-        padding: 0 10px 10px 10px;
 
     }
     .tres{
@@ -208,12 +273,199 @@ footer {
     }
 }
 
-/*
-@keyframes BodyAnimacion
-{
-    0% {background-position: 0 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0 50%;}
-}
-*/
 
+
+/*   ***********    Cosas del formulario Mensaje     ***********  */
+
+.wrapper-checkbox {
+    position: fixed;
+    top: -30px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+
+
+
+.container-checkbox{
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+
+
+}
+
+.container-checkbox input[type="checkbox"] {
+    /* Ajusta el tamaño de la checkbox */
+    width: 35px; /* Ajusta el ancho según tus necesidades */
+    height: 40px; /* Ajusta la altura según tus necesidades */
+    left: 1587%;
+    top: 700%;
+}
+
+.container-checkbox img{
+    left: 1587%;
+    top: 700%;
+}
+
+
+
+input[type="checkbox"]{
+    border: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    
+    width: 100%;
+    z-index: -1;
+}
+
+.container-checkbox img{
+    display:flex ;
+    position: absolute;
+    height: 45px;
+    width: auto;
+
+}
+
+
+.position-display{
+    position: center;
+}
+
+
+.display-on-check{
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s , display 0.5s;
+    position: fixed;
+    align-items:center;
+    
+}
+
+:checked + .display-on-check{
+    opacity: 1;
+    display: block;
+    
+}
+
+@initial{
+    :checked + .display-on-check{
+        opacity: 0;
+    }
+}
+
+
+form{
+    
+    padding: 50px 55px;
+    background-color: #edfff0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    margin: auto;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h5{
+    color: #283629;
+    font-size: 25px;
+}
+
+label{
+    color:#283629;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+
+
+input, textarea{
+    padding: 12px 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: #edfff0;
+    border: 2px solid #F0FAF1;
+    color: #000000;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #b5cab6;
+
+}
+
+
+.form-txt{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+}
+
+.form-txt a{
+    color: #76b28e;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration:none;
+}
+
+.btn{
+    font-size: 14px;
+    color: #ffffff;
+    border: 0;
+    border-radius: 15px;
+    background-color: #51d94c;
+    box-shadow: 0 0 20px rgba(25,254,0,0.4);
+    cursor: pointer;
+
+}
+
+.btn::hover{
+    background-color: #040a8b;
+
+}
+
+@media(max-widht:991px){
+    form{
+        padding: 50px 30px;
+        width: 100%;
+    }
+
+    input{
+        padding: 15px;
+    }
+
+
+
+}
+
+
+
+/*   ***********    Animaciones     ***********  */
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    20% {margin-left: -100%;}
+    40% {margin-left: -100%;}
+
+    40% {margin-left: -200%;}
+    80% {margin-left: -200%;}
+
+    80% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
