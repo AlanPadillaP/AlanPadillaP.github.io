@@ -232,7 +232,7 @@ Contacts {
 
 /*   ***********      Cosas de tamaño en moviles    ***********    */
 
-@media (max-width: 1000px) {
+@media (max-width: 991px) {
     .caja-central{
         width: 90%;
         height: 70%;
@@ -279,78 +279,70 @@ Contacts {
 
 .wrapper-checkbox {
     position: fixed;
-    top: -30px;
-    left: 40%;
+    top: 46%;
+    left: 94.5%;
     transform: translate(-50%, -50%);
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
-
-
-
-.container-checkbox{
-    height: 45px;
-    width: 45px;
+.container-checkbox {
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     position: relative;
     cursor: pointer;
-
-
 }
 
 .container-checkbox input[type="checkbox"] {
-    /* Ajusta el tamaño de la checkbox */
-    width: 35px; /* Ajusta el ancho según tus necesidades */
-    height: 40px; /* Ajusta la altura según tus necesidades */
-    left: 1587%;
-    top: 700%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.container-checkbox img{
-    left: 1587%;
-    top: 700%;
+.label-checkbox {
+    margin-top: 20px;
 }
 
+.container-checkbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: auto;
+}
 
-
-input[type="checkbox"]{
+input[type="checkbox"] {
     border: 1px solid black;
     position: relative;
     cursor: pointer;
-    
     width: 100%;
-    z-index: -1;
-}
-
-.container-checkbox img{
-    display:flex ;
-    position: absolute;
-    height: 45px;
-    width: auto;
-
 }
 
 
-.position-display{
+.position-display {
     position: center;
 }
 
-
-.display-on-check{
+.display-on-check {
     opacity: 0;
     display: none;
-    transition: opacity 0.5s , display 0.5s;
+    pointer-events: none;
+    transition: opacity 0.5s, display 0.5s;
+    text-align: center;
+    z-index: -1; /* Asegura que el formulario oculto esté detrás de la checkbox */
     position: fixed;
-    align-items:center;
-    
+    top: 80%;
+    left: -1500%;
+    transform: translate(-50%, -50%);
 }
 
-:checked + .display-on-check{
+:checked + .display-on-check {
     opacity: 1;
     display: block;
-    
+    z-index: 2; /* Asegura que el formulario oculto esté delante de la checkbox */
 }
 
 @initial{
@@ -364,11 +356,12 @@ form{
     
     padding: 50px 55px;
     background-color: #edfff0;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     text-align: center;
+    font-size: 16px;
     width: 250px;
-    margin: auto;
+    z-index: 3;
 }
 
 .input-group{
@@ -433,12 +426,11 @@ input::placeholder, textarea::placeholder{
 
 }
 
-.btn::hover{
+.btn:hover {
     background-color: #040a8b;
-
 }
 
-@media(max-widht:991px){
+@media(max-width: 991px){
     form{
         padding: 50px 30px;
         width: 100%;

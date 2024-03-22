@@ -237,13 +237,13 @@
     <div class="wrapper-checkbox">
         <div class="container-checkbox">
 
-            <label for="c1"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png"> </label>
+            
+            <label class="label-checkbox" for="c1"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png"> </label>
             <input id="c1" type="checkbox">
-
             
             <div class="display-on-check">
                 <form action="https://formsubmit.co/alanypp@hotmail.com" method="POST">
-                    <contacto>Contacto</contacto>
+                    <p class="contacto">Contacto</p>
         
                     <div class="input-group">
                         <label for="name">Nombre</label>
@@ -262,23 +262,11 @@
                             <a href="#">Politicas de privacidad</a>
                             <a href="#">Terminos y condiciones</a> 
                         </div>
-                        <input class="btn" type="submit" type="button" value="Enviar" onclick="enviarFormulario()">
+                        <input class="btn" type="submit"  value="Enviar" onclick="enviarFormulario()">
         
                         <input type="hidden" name="_next" value="#" >
                         <input type="hidden" name="_captcha" value="false">
 
-                        <script>
-                            function enviarFormulario() {
-                                // Obtiene el formulario por su ID
-                                var formulario = document.getElementById('miFormulario');
-                        
-                                // Realiza la acción deseada, por ejemplo, mostrar un mensaje
-                                alert('Formulario enviado');
-                        
-                                // Evita el comportamiento predeterminado del formulario
-                                return false;
-                            }
-                        </script>
         
         
                     </div>
@@ -287,17 +275,6 @@
         
             </div>
 
-
-            
-                   
-
-        
-                        
-    
-    
-                
-            
-            
         </div>
     </div>
 
