@@ -12,4 +12,4 @@ Un pequeño portafolio personal para mostrar algunos de mis conocimientos como d
 
 ![](https://i.postimg.cc/J7K16xpC/Captura.png)
 
-> Follow your heart. (https://alanpadillap.github.io/Portafolio/ )
+> Follow your heart. (https://alanpadillap.github.io/)
