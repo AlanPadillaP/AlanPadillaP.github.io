@@ -206,29 +206,47 @@ Contacts {
 .slider-box{
     width: 360px;
     height: auto;
-    margin: 50 auto 0;
+    margin: 50px auto 0;
     overflow: hidden;
+    position: relative;
    
 }
 .slider-box ul{
     display: flex;
     padding: 0;
-    width: 400%;
-    animation: slide 20s infinite alternate ease-in-out;
+    margin: 0; 
+    width: 100%; 
+    animation: slide 16s infinite alternate ease-in-out;
     
 }
 
 .slider-box li {
-    width: 100%;
+    width: 25%;
     list-style: none;
     position: relative;
 }
 
 
 .slider-box img {
-    width: 70%;
+    width: 30%;
  
 }
+
+
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+}
+
+
 
 /*   ***********      Cosas de tamaño en moviles    ***********    */
 
@@ -329,7 +347,6 @@ input[type="checkbox"] {
 .display-on-check {
     opacity: 0;
     display: none;
-    pointer-events: none;
     transition: opacity 0.5s, display 0.5s;
     text-align: center;
     z-index: -1; /* Asegura que el formulario oculto esté detrás de la checkbox */
@@ -342,7 +359,7 @@ input[type="checkbox"] {
 :checked + .display-on-check {
     opacity: 1;
     display: block;
-    z-index: 2; /* Asegura que el formulario oculto esté delante de la checkbox */
+    z-index: 1; /* Asegura que el formulario oculto esté delante de la checkbox */
 }
 
 @initial{
@@ -361,7 +378,7 @@ form{
     text-align: center;
     font-size: 16px;
     width: 250px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .input-group{
@@ -413,9 +430,10 @@ input::placeholder, textarea::placeholder{
     font-size: 12px;
     font-weight: 600;
     text-decoration:none;
+    cursor: pointer;
 }
 
-.btn{
+.submit{
     font-size: 14px;
     color: #ffffff;
     border: 0;
@@ -426,7 +444,7 @@ input::placeholder, textarea::placeholder{
 
 }
 
-.btn:hover {
+.submit:hover {
     background-color: #040a8b;
 }
 
@@ -444,20 +462,39 @@ input::placeholder, textarea::placeholder{
 
 }
 
+@media(max-width: 580px) {
 
+  section h2{
+    font-size: 2rem;
+  }
+
+  form p{
+    font-size: 1rem;
+  }
+
+  #message-field{
+    height: 8rem;
+  }
+
+  form h3{
+    font-size: 1.1rem;
+  }
+
+}
 
 /*   ***********    Animaciones     ***********  */
 
 @keyframes slide {
     0% {margin-left: 0;}
-    20% {margin-left: 0;}
+    25% {margin-left: 0;}
 
-    20% {margin-left: -100%;}
-    40% {margin-left: -100%;}
+    25% {margin-left: -100%;}
+    50% {margin-left: -100%;}
 
-    40% {margin-left: -200%;}
-    80% {margin-left: -200%;}
+    50% {margin-left: -200%;}
+    75% {margin-left: -200%;}
 
-    80% {margin-left: -300%;}
+    75% {margin-left: -300%;}
     100% {margin-left: -300%;}
 }
+
